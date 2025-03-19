@@ -27,7 +27,7 @@ public class RestApiBookLibraryApplication implements CommandLineRunner {
 
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(final String... args) {
 		log.info("Datasource -> "+dataSource.toString());
 		final JdbcTemplate restTemplate = new JdbcTemplate(dataSource);
 		restTemplate.execute("select 1");
